@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./stylesheets/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body id="home">
+
+
+    <div> </div>
+    <div id="menu">
+      <img class="avatar" src="<%= userLogged.imageURL %>">
+      <h6>Bonjour <%= userLogged.firstName %></h6>
+      <ul>
+        <li><a href="account.html">Mon compte</a></li>
+        <li><a href="order.html">Mes commandes</a></li>
+      </ul>
+    </div>
+    <div id="content">
+
+<% for (var i=0; i < basket.length ; i++ ) { %>
+
+      <ul>
+        <li>Commande n° <%= basket[i].id %></li>
+        <li>Total: <%= basket[i].totalInvoice %>€</li>
+        <li>frais de port : <%= basket[i].deliveryPrice %>€</li>
+      </ul>
+
+<% } %>
+
+    </div>
+
+    <div id="menu-right">
+      <ul>
+        <li><a href="#"><img class="picto" src="basket.svg"></a></li>
+        <li><form action="/orderAdd" method="post">
+          <input type="hidden" name="userId" value="<%= userLogged._id %>">
+          <button class="picto" src="logout.svg" type="submit">Ajouter</button></form></li>
+      </ul>
+    </div>
+
+
+  </body>
+</html>

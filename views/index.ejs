@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body id="welcome">
+
+<% if (connexion == "false ") { %>
+    <div class="alert alert-warning" role="alert">
+    Erreur de mot de passe !
+  </div>
+<% } %>
+
+
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="emailTyped" placeholder="votre email">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="password" name="passwordTyped" placeholder="votre mot de passe">
+      </div>
+      <div class="form-group">
+        <input class="btn btn-info btn-sm" type="submit" value="valider">
+      </div>
+    </form>
+
+
+
+    <form action="/inscription" method="POST">
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="firstName" placeholder="votre prenom">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="lastName" placeholder="votre nom">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="email" placeholder="votre email">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="password" name="password" placeholder="votre mot de passe">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="phone" placeholder="votre téléphone">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="address" placeholder="votre adresse">
+      </div>
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" name="zipcode" placeholder="votre code postal">
+      </div>
+      <div class="form-group">
+        <input class="btn btn-info btn-sm" type="submit" value="valider">
+      </div>
+    </form>
+
+
+  </body>
+</html>
