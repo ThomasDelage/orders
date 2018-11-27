@@ -4,6 +4,18 @@ background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-2
 background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+#shopTitle {
+  font-family: Pacifico;
+  border: solid 1px #54a0ff;
+  border-radius: 10px;
+  color: white;
+  background-color: #2e86de;
+  padding: 5px;
+  margin-bottom: 5vh;
+  text-align: center;
+
+}
+
 #home {
   font-family: 'Open Sans', sans-serif;
   font-size:14px;
@@ -24,11 +36,39 @@ background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, F
   align-items:center;
   min-height: 80vh;
   padding-top:50px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
 }
 
 #welcome form {
   width: 50%;
 }
+
+.bouton-welcome-valider, .account-btn-modifier {
+
+  font-family: Pacifico;
+  border: solid 1px #feca57;
+  border-radius: 10px;
+  color: white;
+  background-color: #ff9f43;
+  padding: 3px;
+  width: 30%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#content{
+text-align: center;
+margin: auto;
+width: 70%;
+justify-content: center;
+
+
+}
+
+
+
 
 hr {
   border: 1px solid red;
@@ -42,6 +82,7 @@ h6 {
   width: 60px;
   border-radius: 50%;
   margin: 15px;
+  border: 1px solid #ff9f43;
 }
 
 #menu {
@@ -53,6 +94,20 @@ h6 {
   height: 40vh;
   padding: 15px;
   text-align: center;
+  justify-content: : center;
+}
+
+#menu-elements{
+  background-color: white;
+  color: #ff9f43;
+  border: 1px solid #ff9f43;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 8vh;
+
+
+
+
 }
 
 #content{
@@ -85,9 +140,11 @@ ul li a {
 }
 
 .picto {
-  width: 50px;
+  width: 60px;
 }
 
 #menu-right ul {
   padding-inline-start: 5px;
+  background-color: white;
+  color: #54a0ff;
 }

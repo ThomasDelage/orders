@@ -13,19 +13,24 @@
 <body id="home">
 
 
+
+
   <div> </div>
   <div id="menu">
     <img class="avatar" src="<%= userLogged.imageURL %>">
     <h6>Bonjour <%= userLogged.firstName %> </h6>
     <ul>
-      <li><a href="account.html">Mon compte</a></li>
-      <li><a href="order.html">Mes commandes</a></li>
+      <li><a href="account.html" id="menu-elements">Mon compte</a></li>
+      <li><a href="order.html" id="menu-elements">Mes commandes</a></li>
     </ul>
   </div>
 
   <div id="content">
 
-    <form action="/accountUpdate" method="POST">
+    <%- include("../public/javascripts/headerData.js") -%>
+
+
+    <form action="/accountUpdate" method="POST" id="formulaire-modification-compte">
       <div class="form-group">
         <input class="form-control form-control-sm" type="text" name="firstName" value="<%= userLogged.firstName%>">
         </div>
@@ -45,7 +50,7 @@
                   <input class="form-control form-control-sm" type="text" name="zipcode" value="<%= userLogged.zipcode%>">
         </div>
                   <div>
-                    <input class="btn btn-info btn-sm" type="submit" value="Modifier">
+                    <input class="btn btn-info btn-sm account-btn-modifier" type="submit" value="Modifier">
         </div>
                     <input name="id" class="btn btn-info btn-sm" type="hidden" value="<%=userLogged.id%>">
 
@@ -57,9 +62,7 @@
                   <div id="menu-right">
                     <ul>
                       <li>
-                        <form action="/order" method="post">
-                          <button class="picto" type="submit" src="./images/basket.svg"></button>
-                        </form>
+                          <a href="/order" ><img src="./images/basket.svg"  class="picto"></a>
                       </li>
                       <li><a href="/logout"><img class="picto" src="./images/logout.svg"></a></li>
                     </ul>

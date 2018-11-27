@@ -5,16 +5,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+
     <meta charset="utf-8">
     <title></title>
   </head>
   <body id="welcome">
 
-<% if (connexion == "false ") { %>
+<% if (connexion == "false") { %>
     <div class="alert alert-warning" role="alert">
     Erreur de mot de passe !
   </div>
 <% } %>
+
+<%- include("../public/javascripts/headerData.js") -%>
 
 
     <form action="/login" method="POST">
@@ -25,7 +31,7 @@
         <input class="form-control form-control-sm" type="password" name="passwordTyped" placeholder="votre mot de passe">
       </div>
       <div class="form-group">
-        <input class="btn btn-info btn-sm" type="submit" value="valider">
+        <input class="btn btn-info btn-sm bouton-welcome-valider" type="submit" value="Valider">
       </div>
     </form>
 
@@ -54,7 +60,7 @@
         <input class="form-control form-control-sm" type="text" name="zipcode" placeholder="votre code postal">
       </div>
       <div class="form-group">
-        <input class="btn btn-info btn-sm" type="submit" value="valider">
+        <input class="btn btn-info btn-sm bouton-welcome-valider" type="submit" value="Valider">
       </div>
     </form>
 
